@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ioc\AmbientScope.cs" />
+    <Compile Include="Ioc\ScopeContexts\AmbientScope.cs" />
     <Compile Include="Ioc\CoreServiceProvider.cs" />
     <Compile Include="Ioc\ScopeContexts\AmbientScopeContext.cs" />
     <Compile Include="Ioc\ScopeContexts\IScopeContext.cs" />
