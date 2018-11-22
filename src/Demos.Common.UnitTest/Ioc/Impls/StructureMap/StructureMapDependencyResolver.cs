@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using StructureMap;
 
 namespace Demos.Common.Ioc.Impls.StructureMap
 {
     public class StructureMapDependencyResolver : IMyDependencyResolver
     {
-        public IContainer Container { get; set; }
+        protected IContainer Container { get; set; }
 
         public StructureMapDependencyResolver(IContainer container)
         {
@@ -15,17 +16,22 @@ namespace Demos.Common.Ioc.Impls.StructureMap
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            if (Container == null)
+            {
+                return;
+            }
+            Container.Dispose();
+            Container = null;
         }
 
         public object GetService(Type serviceType)
         {
-            throw new NotImplementedException();
+            return Container.GetInstance(serviceType);
         }
 
         public IEnumerable<object> GetServices(Type serviceType)
         {
-            throw new NotImplementedException();
+            return Container.GetAllInstances(serviceType).Cast<object>();
         }
 
         public IMyDependencyScope BeginScope()
