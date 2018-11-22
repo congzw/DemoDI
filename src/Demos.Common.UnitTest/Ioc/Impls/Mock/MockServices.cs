@@ -6,10 +6,16 @@ namespace Demos.Common.Ioc.Impls.Mock
     {
         public string CreatedBy { get; set; }
 
+        public Action WhenDispose { get; set; }
+
         public void Dispose()
         {
             string message = string.Format("Disposed => <{0}:{1}>", this.GetType().Name, this.GetHashCode());
             AssertHelper.WriteLine(message);
+            if (WhenDispose != null)
+            {
+                WhenDispose();
+            }
         }
     }
 
@@ -37,5 +43,10 @@ namespace Demos.Common.Ioc.Impls.Mock
         public void Dispose()
         {
         }
+    }
+
+    public class MockDisposeTester
+    {
+        public bool Invoked { get; set; }
     }
 }

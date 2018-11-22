@@ -67,6 +67,7 @@
     <Compile Include="Ioc\Impls\Mock\MockDependencyResolverSpec.cs" />
     <Compile Include="Ioc\Impls\Mock\MockContainer.cs" />
     <Compile Include="Ioc\Impls\Mock\MockServices.cs" />
+    <Compile Include="Ioc\Impls\StructureMap\AmbientScopeContextSpec.cs" />
     <Compile Include="Ioc\Impls\StructureMap\StructureMapDependencyResolverSpec.cs" />
     <Compile Include="Ioc\Impls\StructureMap\StructureMapDependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
