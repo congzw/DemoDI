@@ -1,3 +1,5 @@
+using Demos.Common.AmbientScopes;
+
 namespace Demos.Common.Ioc.ScopeContexts
 {
     public class AmbientScopeContext : IScopeContext

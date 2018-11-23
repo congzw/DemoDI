@@ -1,4 +1,5 @@
-﻿using Demos.Common.Ioc.Impls.Mock;
+﻿using Demos.Common.AmbientScopes;
+using Demos.Common.Ioc.Impls.Mock;
 using Demos.Common.Ioc.ScopeContexts;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StructureMap;

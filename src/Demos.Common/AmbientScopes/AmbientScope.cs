@@ -2,7 +2,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Runtime.Remoting.Messaging;
 
-namespace Demos.Common.Ioc.ScopeContexts
+namespace Demos.Common.AmbientScopes
 {
     public class AmbientScope : IDisposable
     {
